@@ -1,33 +1,28 @@
 <?php 
-$name = 'N1';
-$weightKg = 86;
-$heightCm =140;
-
-$heightM = $heightCm / 100 ;
+$name = 'imad';
+$weightKg = 48;
+$heightCm =158;
+$heightM = $heightCm / 100;
 $heightMm = pow($heightM, 2);
 
 // echo "la hauteur au métre $heightM m <br>";
-// echo "la hauteur au métre au carré $heightMm m² <br>";
+// echo "la hauteur au carré $heightMm m² <br>";
 $valeur_IMC = $weightKg / $heightMm;
 // echo " votre IMC $valeur_IMC <br>";
 
-echo "bonjour $name votre IMC et $valeur_IMC";
+echo "Bonjour $name, votre IMC et $valeur_IMC";
 
 
 ?>
 
-
-
-
-
 <?php
+echo "<br>";
+function CalculerIMC($name,$weightKg,$heightCm){ 
+    $heightM = $heightCm / 100 ;
+    $heightMm = pow($heightM, 2);
+    $valeur_IMC = $weightKg / $heightMm;
 
-function CalculerImc($name,$weightKg,$heightCm){ // fonction pour calculer IMC d'un utilisateur
-
-$IMC = $weightKg / ($heightCm*$heightCm/10000);
-$message = "Bonjour $name , votre IMC est $IMC";
-return $message;
+echo  "Bonjour $name , votre IMC est $valeur_IMC";
 }
-$message = CalculerImc("imad",48,158);
+CalculerIMC("imad",48,158);
 
-echo $message;
