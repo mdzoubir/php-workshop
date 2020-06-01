@@ -3,6 +3,7 @@ $name = 'imad';
 $weightKg = 48;
 $heightCm =158;
 $heightM = $heightCm / 100;
+
 $heightMm = pow($heightM, 2);
 
 // echo "la hauteur au métre $heightM m <br>";
@@ -25,4 +26,3 @@ function CalculerIMC($name,$weightKg,$heightCm){
 echo  "Bonjour $name , votre IMC est $valeur_IMC";
 }
 CalculerIMC("imad",48,158);
-
