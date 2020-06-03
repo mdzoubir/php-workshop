@@ -20,23 +20,20 @@ function somme(){
 
 
 //fonction pour voir si un nombre entré en paramètre est premier ou non ;
-function premier($x){
+function test($x){
   for ($i=2; $i < $x ; $i++) { 
-    $mod = $x % $i;
-    if($mod==0){
-      $resulta =$x. " n'est pas un nombre premier.";
-        
-    }elseif($mod>=0){
-      $resulta =$x. "  est un nombre premier.";
+    
+    if($x % $i==0){
+      $test =1;
     }
-    echo "$x % $i = $mod <br>";
-  }
-  echo $resulta;
-}premier(10);
+  }if (isset($test)) {
+    echo "$x n'est pas un nomber premier";
+  } else {
+    echo "$x est un nomber premier";
+  } 
+}
 
-
-
-
+call_user_func('test', 10);
 
 
 
